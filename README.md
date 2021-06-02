@@ -454,10 +454,10 @@ For Node, we use a foreign function library called [node-ffi](https://github.com
 
 File [client.js](./client.js)
 ```js
-var ref = require("ref");
-var ffi = require("ffi");
-var Struct = require("ref-struct")
-var ArrayType = require("ref-array")
+var ref = require("ref-napi");
+var ffi = require("ffi-napi");
+var Struct = require('ref-struct-di')(ref)
+var ArrayType = require('ref-array-di')(ref)
 
 var longlong = ref.types.longlong;
 var LongArray = ArrayType(longlong);
