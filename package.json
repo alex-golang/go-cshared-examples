@@ -1,0 +1,29 @@
+{
+  "name": "go-cshared-examples",
+  "version": "1.0.1",
+  "description": "This respository contains source examples for the article [*Calling Go Functions from Other Languages*](https://medium.com/learning-the-go-programming-language/calling-go-functions-from-other-languages-4c7d8bcc69bf#.n73as5d6d) (medium.com).  Using the `-buildmode=c-shared` build flag, the compiler outputs a standard shared object binary file (.so) exposing Go functions as a C-style APIs. This lets programmers create Go libraries that can be called from other languages including C, Python, Ruby, Node, and Java (see contributed example for Lua) as done in this repository.",
+  "main": "client.js",
+  "scripts": {
+    "build": "go build -o awesome.so -buildmode=c-shared awesome.go",
+    "start": "node client.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladimirvivien/go-cshared-examples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladimirvivien/go-cshared-examples/issues"
+  },
+  "homepage": "https://github.com/vladimirvivien/go-cshared-examples#readme",
+  "dependencies": {
+    "ffi-napi": "^4.0.3",
+    "ref-array-di": "^1.2.2",
+    "ref-napi": "^3.0.3",
+    "ref-struct-di": "^1.1.1",
+    "ref-union-di": "^1.0.1",
+    "weak-napi": "^2.0.2"
+  }
+}
